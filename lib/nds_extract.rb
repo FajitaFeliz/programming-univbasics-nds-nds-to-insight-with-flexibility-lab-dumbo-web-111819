@@ -69,8 +69,12 @@ def gross_per_studio(collection)
     result = {}
     
     while i < collection.length do
+      hash = {}
       if !result.has_key?(collection[i][:studio])
-        result << 
+        hash = {"#{collection[i][:studio]}" => 0}
+        result.merge!(hash)
+      end
+      i += 1
     end
 
 end
