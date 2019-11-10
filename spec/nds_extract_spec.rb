@@ -23,15 +23,15 @@ require 'spec_helper'
 #   end
 # end
 
-# describe 'movies_with_director_key' do
-#   it 'adds a :director_name key an AoH of movies' do
-#     dir_name = "Byron Poodle"
-#     test_set = [{:title => "TestA"}, {:title => "TestB"}]
-#     updated_movies = movies_with_director_key(dir_name, test_set)
-#     expect(updated_movies[0][:director_name]).to eq(dir_name), "Should add director name to each movie Hash"
-#     expect(updated_movies[1][:director_name]).to eq(dir_name), "Should add director name to each movie Hash"
-#   end
-# end
+describe 'movies_with_director_key' do
+  it 'adds a :director_name key an AoH of movies' do
+    dir_name = "Byron Poodle"
+    test_set = [{:title => "TestA"}, {:title => "TestB"}]
+    updated_movies = movies_with_director_key(dir_name, test_set)
+    expect(updated_movies[0][:director_name]).to eq(dir_name), "Should add director name to each movie Hash"
+    expect(updated_movies[1][:director_name]).to eq(dir_name), "Should add director name to each movie Hash"
+  end
+end
 
 describe 'movies_with_directors_set' do
   describe 'when given a Hash with keys :name and :movies,' do
