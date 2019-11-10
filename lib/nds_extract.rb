@@ -80,7 +80,7 @@ def gross_per_studio(collection)
       hash = {}
       if !result.has_key?(collection[i][:studio])
         hash = {"#{collection[i][:studio]}" => 0}
-        result.merge!(hash)
+        result << hash
       end
       i += 1
     end
