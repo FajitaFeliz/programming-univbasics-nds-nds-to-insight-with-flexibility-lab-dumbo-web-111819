@@ -84,7 +84,15 @@ def movies_with_directors_set(source)
   
   while i < source.length do
     k = 0
-    while k < source[i]
+    while k < source[i][:movies].length do
+      hash = source[i][:movies][k]
+      hash[:director_name] = source[i][:name]
+      output << hash
+      k += 1
+    end
+    i += 1
+  end
+  output
 
 # { :name => "A", :movies => [{ :title => "Test" }] }
 # becomes... [[{:title => "Test", :director_name => "A"}], ...[], ... []]
