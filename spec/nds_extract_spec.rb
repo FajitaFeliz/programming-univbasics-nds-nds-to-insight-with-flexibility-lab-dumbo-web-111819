@@ -70,18 +70,18 @@ describe 'movies_with_directors_set' do
   end
 end
 
-describe 'gross_per_studio' do
-  it 'collects each movie based on the studio key' do
-    test_data = [
-      { :title => "Movie A", :studio => "Alpha Films", :worldwide_gross => 10 },
-      { :title => "Movie B", :studio => "Alpha Films", :worldwide_gross => 30 },
-      { :title => "Movie C", :studio => "Omega Films", :worldwide_gross => 30 }
-    ]
-    result = gross_per_studio(test_data)
-    expect(result["Alpha Films"]).to eq(40), "We should collect the totals of films made by this Alpha Films"
-    expect(result["Omega Films"]).to eq(30), "We should collect the totals of films made by this Omega Films"
-  end
-end
+# describe 'gross_per_studio' do
+#   it 'collects each movie based on the studio key' do
+#     test_data = [
+#       { :title => "Movie A", :studio => "Alpha Films", :worldwide_gross => 10 },
+#       { :title => "Movie B", :studio => "Alpha Films", :worldwide_gross => 30 },
+#       { :title => "Movie C", :studio => "Omega Films", :worldwide_gross => 30 }
+#     ]
+#     result = gross_per_studio(test_data)
+#     expect(result["Alpha Films"]).to eq(40), "We should collect the totals of films made by this Alpha Films"
+#     expect(result["Omega Films"]).to eq(30), "We should collect the totals of films made by this Omega Films"
+#   end
+# end
 
 
 # describe 'The directors_database method can be processed by the studios_totals method' do
